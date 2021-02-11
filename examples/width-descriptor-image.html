@@ -1,0 +1,47 @@
+<html><head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width">
+  <title>Responsive HTML images demo</title>
+  <style>
+    html {
+      font-family: sans-serif;
+      background-color: gray;
+    }
+
+    body {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: white;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <h1>Does srcset work as expected?</h1>
+      <p>Ensure you open this document with a innerWidth of less than 600px and compare to larger than 600px.</p>
+
+      <h2>Image Element With Width Descriptor on Each Image Candidate</h2>
+      <img srcset="https://via.placeholder.com/480x100.png 480w, https://via.placeholder.com/800x100.png 800w" sizes="(max-width: 600px) 480px, 800px" src="https://via.placeholder.com/800x100.png" alt="Elva dressed as a fairy">
+    
+      <h2>Image Element With Width Descriptor Excluded from Final Image Candidate</h2>
+      <img srcset="https://via.placeholder.com/480x100.png 480w, https://via.placeholder.com/800x100.png" sizes="(max-width: 600px) 480px, 800px" src="https://via.placeholder.com/800x100.png" alt="Elva dressed as a fairy">
+    </section>
+  </main>
+
+</body></html>
